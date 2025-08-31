@@ -3,6 +3,7 @@ import Page from "./assets/download.png";
 import Button from "./components/Button";
 import { Mouse, Cpu, Zap, GlobeLock } from 'lucide-react'
 import Card from "./components/Card";
+import work from './assets/space.mp4'
 
 
 import AOS from "aos";
@@ -78,7 +79,77 @@ function Home() {
                         para="Lead technical decisions, architect systems, and solve complex problems with minimal bureaucracy and maximum engineering freedom."
                     />
                 </div>
+
             </div>
+            <div className="pt-24 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-10">
+                <div className="flex-1 flex flex-col gap-8">
+                    <h1 className="text-4xl sm:text-5xl text-white font-bold">
+                        From <span className="text-green-500">Abstract </span>
+                        to <span className="text-orange-400">Physical</span>
+                    </h1>
+
+                    <p className="text-gray-400 text-base sm:text-lg md:text-xl lg:text-[1.3rem] max-w-xl md:max-w-2xl lg:max-w-4xl leading-relaxed">
+                        Stop building another CRUD app. Start building systems where your algorithms
+                        control robotic arms, your data structures optimize supply chains, and your
+                        code directly impacts the physical world.
+                    </p>
+
+                    <ul className="text-gray-300 text-[1rem] leading-relaxed [&>li]:before:content-['➤'] [&>li]:before:mr-2 [&>li]:before:text-green-500 space-y-2">
+                        <li>PLC Programming meets Modern Software Engineering</li>
+                        <li>SCADA Systems using Web Technologies</li>
+                        <li>Industrial IoT using modern libraries and Real-time Data</li>
+                        <li>Digital Twins using 3D Graphics and Open Source Technologies</li>
+                    </ul>
+
+                    <div className="bg-slate-900 border border-gray-600 rounded-xl p-4">
+                        <video
+                            src={work}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-auto rounded-3xl shadow-lg"
+                        ></video>
+                    </div>
+                </div>
+
+                <div className="flex-1 flex flex-col bg-slate-900 p-4  rounded-xl items-start text-white font-mono text-[0.9rem] border border-gray-700 w-full lg:w-[40rem] lg:mt-[7.7rem] lg:h-[35rem] ">
+                    <p>(* IEC 61131-3 Structured Text *)</p>
+
+                    <p className="py-2">PROGRAM ConveyorMerge</p>
+
+                    <p className="pt-2">VAR</p>
+
+                    <p className="pl-5 pt-3">
+                        ConveyorA_Speed : REAL := 1.5; (* m/s *) <br />
+                        ConveyorB_Speed : REAL := 1.2; (* m/s *) <br />
+                        PartDetectorA : BOOL; <br />
+                        PartDetectorB : BOOL; <br />
+                        AllowMerge : BOOL := FALSE; <br />
+                    </p>
+
+                    <p className="pb-4">END_VAR</p>
+
+                    <p className="leading-7">
+                        IF PartDetectorA AND NOT PartDetectorB THEN <br />
+                        <span className="pl-5">AllowMerge := TRUE;</span><br />
+                        <span className="pl-5">ConveyorA_Speed := 2.0; (* Accelerate *)</span><br />
+                        ELSIF PartDetectorB THEN <br />
+                        <span className="pl-5">ConveyorA_Speed := 0.8; (* Wait for merge *)</span><br />
+                        END_IF;
+                    </p>
+
+                    <div className="w-full bg-green-950 px-5 py-3 mt-4 border-l-4 border-green-500 rounded">
+                        <p className="text-white font-bold">✓ PLC Program Executed</p>
+                        <p className="text-white text-[0.8rem]">
+                            Conveyor A: 2.0 m/s, AllowMerge: TRUE, Parts flowing smoothly
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
 
 
         </div>
