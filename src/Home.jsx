@@ -221,7 +221,7 @@ function Home() {
                             <Card2 input="Decision" />
                         </div>
 
-                        <div className="bg-green-950 px-3 sm:px-4 py-4 sm:py-6 rounded-xl mt-4 leading-relaxed border-gray-700 border">
+                        <div className="bg-emerald-950 px-3 sm:px-4 py-4 sm:py-6 rounded-xl mt-4 leading-relaxed border-gray-700 border">
                             <h2 className="text-cyan-50 font-bold text-sm sm:text-base flex items-center mb-2 sm:mb-3">
                                 <Cpu size={16} className="inline mr-2" /> MQTT Industrial Messaging
                             </h2>
