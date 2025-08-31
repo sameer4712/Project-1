@@ -1,13 +1,17 @@
 import React from "react";
 import Page from "./assets/download.png";
 import Button from "./components/Button";
-import { Mouse, Cpu, Zap, GlobeLock } from 'lucide-react'
+import { Mouse, Cpu, Zap, GlobeLock, Fan, Infinity } from 'lucide-react'
 import Card from "./components/Card";
 import work from './assets/space.mp4'
+import Car from './assets/fac.mp4'
 
 
 import AOS from "aos";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import Card2 from "./components/Card2";
+import Card3 from "./components/Card3";
 
 function Home() {
     useEffect(() => {
@@ -38,7 +42,7 @@ function Home() {
                 </div>
 
                 <div className="relative z-10 px-6 sm:px-12 lg:px-16 flex flex-wrap gap-4 top-32 md:top-40">
-                    <Button />
+                    <Button name="Apply Now" />
                     <button className="bg-transparent text-orange-400 py-2 px-5 border border-gray-400 rounded-xl font-bold hover:text-cyan-50 transition">
                         Free Simulation Software
                     </button>
@@ -81,7 +85,12 @@ function Home() {
                 </div>
 
             </div>
-            <div className="pt-24 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-10">
+            <motion.div className="pt-24 px-6 md:px-12 lg:px-24 flex flex-col lg:py-14 lg:flex-row gap-10 bg-gradient-to-t from-gray-900/80 to-black"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: .6, ease: "easeOut" }}
+            >
                 <div className="flex-1 flex flex-col gap-8">
                     <h1 className="text-4xl sm:text-5xl text-white font-bold">
                         From <span className="text-green-500">Abstract </span>
@@ -101,7 +110,11 @@ function Home() {
                         <li>Digital Twins using 3D Graphics and Open Source Technologies</li>
                     </ul>
 
-                    <div className="bg-slate-900 border border-gray-600 rounded-xl p-4">
+                    <motion.div className="bg-slate-900 border border-gray-600 rounded-xl p-4"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}>
                         <video
                             src={work}
                             autoPlay
@@ -110,10 +123,15 @@ function Home() {
                             playsInline
                             className="w-full h-auto rounded-3xl shadow-lg"
                         ></video>
-                    </div>
+                    </motion.div>
                 </div>
 
-                <div className="flex-1 flex flex-col bg-slate-900 p-4  rounded-xl items-start text-white font-mono text-[0.9rem] border border-gray-700 w-full lg:w-[40rem] lg:mt-[7.7rem] lg:h-[35rem] ">
+                <motion.div className="flex-1 flex flex-col bg-slate-900 p-4  rounded-xl items-start text-white font-mono text-[0.9rem] border border-gray-700 w-full lg:w-[40rem] lg:mt-[7.7rem] lg:h-[35rem] "
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     <p>(* IEC 61131-3 Structured Text *)</p>
 
                     <p className="py-2">PROGRAM ConveyorMerge</p>
@@ -145,11 +163,153 @@ function Home() {
                             Conveyor A: 2.0 m/s, AllowMerge: TRUE, Parts flowing smoothly
                         </p>
                     </div>
-                </div>
+
+                </motion.div>
+            </motion.div>
+
+            <motion.div
+                className="flex flex-col gap-5 justify-center items-center mt-12 px-4 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+                <button className="bg-[#2d0d3a] text-[#c47dff] px-6 py-3 rounded-lg border border-gray-700 font-bold text-lg sm:text-xl">
+                    Our Vision
+                </button>
+
+                <h1 className="text-white text-3xl sm:text-4xl lg:text-6xl font-bold leading-snug">
+                    Engineering <span className="text-[#c47dff]">Excellence</span>
+                </h1>
+
+                <p className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-xl sm:max-w-2xl lg:max-w-4xl py-3">
+                    To create the most intellectually stimulating environment for optimistic engineers,
+                    granting them autonomy to act decisively, ensuring impactful and innovative automation
+                    solutions.
+                </p>
+            </motion.div>
+
+            <div className="flex flex-col lg:flex-row justify-center lg:justify-around mt-10 lg:mt-20 gap-6 px-4 sm:px-8 lg:px-20">
+
+                <motion.div
+                    className="flex flex-col w-full sm:max-w-lg lg:max-w-2xl h-auto"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                    <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white flex items-center mb-4 sm:mb-6">
+                        <span className="text-white px-2 sm:px-3 py-1 rounded-md mr-2">
+                            <Fan size={28} className="inline text-cyan-400" /> Real-time Control Systems
+                        </span>
+                    </h1>
+
+                    <div className="bg-slate-900 rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 flex flex-col flex-1 border border-gray-700">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6 gap-3 sm:gap-0">
+                            <h2 className="text-cyan-50 font-bold text-lg sm:text-xl lg:text-2xl flex items-center">
+                                <span className="px-2 py-1 rounded-md mr-2 text-white">MQTT</span>
+                                Industrial Messaging
+                            </h2>
+                            <button className="text-slate-900 bg-cyan-400 px-4 py-2 rounded-xl font-semibold hover:bg-cyan-300 transition text-sm sm:text-base">
+                                Run Code
+                            </button>
+                        </div>
+
+                        <div className="space-y-3">
+                            <Card2 input="Input" />
+                            <Card2 input="Processing" />
+                            <Card2 input="Decision" />
+                        </div>
+
+                        <div className="bg-green-950 px-3 sm:px-4 py-4 sm:py-6 rounded-xl mt-4 leading-relaxed border-gray-700 border">
+                            <h2 className="text-cyan-50 font-bold text-sm sm:text-base flex items-center mb-2 sm:mb-3">
+                                <Cpu size={16} className="inline mr-2" /> MQTT Industrial Messaging
+                            </h2>
+                            <p className="text-cyan-50 text-xs sm:text-sm lg:text-base">
+                                These examples show real MQTT payload data from industrial systems,
+                                featuring hierarchical topic structures, standardized JSON formats,
+                                and telemetry data for sensors, PLCs, and alarms in manufacturing environments.
+                            </p>
+                        </div>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    className="flex flex-col w-full lg:w-[35rem] space-y-5 mt-6 lg:mt-0"
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                >
+                    <h1 className="text-2xl sm:text-3xl font-bold text-white flex items-center">
+                        <span className="px-3 py-2 rounded-md mr-2 -mt-1 text-white">
+                            <Infinity size={32} className="inline text-[#c47dff]" /> Our Core Values
+                        </span>
+                    </h1>
+
+                    <div className="text-white bg-slate-900 px-6 sm:px-8 py-6 rounded-xl border border-gray-700 space-y-5">
+                        <div className="flex items-start gap-3">
+                            <span className="w-3 h-3 rounded-full bg-green-500 mt-2"></span>
+                            <p className="font-bold text-lg sm:text-xl">Project needs come first</p>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                            <span className="w-3 h-3 rounded-full bg-cyan-400 mt-2"></span>
+                            <div>
+                                <p className="font-bold text-lg sm:text-xl">Intellectual Stimulation</p>
+                                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                                    Complex technical challenges that push the boundaries of engineering excellence.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                            <span className="w-3 h-3 rounded-full bg-orange-400 mt-2"></span>
+                            <div>
+                                <p className="font-bold text-lg sm:text-xl">Engineering Autonomy</p>
+                                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                                    Freedom to make decisive technical decisions and architect innovative solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-slate-900 rounded-xl p-4 lg:mt-5 overflow-hidden shadow-lg border border-gray-700">
+                        <video src={Car} className="w-full rounded-lg object-cover" autoPlay
+                            loop
+                            muted
+                            playsInline />
+                    </div>
+                </motion.div>
             </div>
 
+            <motion.div
+                className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 px-6 sm:px-12 lg:px-24 mt-12"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >
+                <Card3 no="31" title="Sucessfull Project" para="Launched across multiple industries" />
+                <Card3 no="3" title="Fortune 500 Companies" para="Trusted by industry leaders worldwide" />
+                <Card3 no="3" title="Countries" para="Global offices serving international clients" />
+            </motion.div>
 
-
+            <motion.div
+                className="flex flex-col items-center justify-center py-16 gap-6 px-4 text-center"
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.6 }}
+                transition={{ duration: 1.8, ease: "easeOut" }}
+            >
+                <h1 className="text-white text-3xl sm:text-4xl lg:text-6xl font-bold leading-snug">
+                    Ready to Build the <span className="text-cyan-400">Future</span>?
+                </h1>
+                <p className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-xl sm:max-w-2xl lg:max-w-4xl">
+                    Join a team where your code doesn't just run in browsers—it runs factories, controls robots, and shapes the physical world around us.
+                </p>
+                <Button name="Start Your Application" />
+            </motion.div>
 
 
         </div>
