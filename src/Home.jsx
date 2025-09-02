@@ -199,7 +199,7 @@ function Home() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white flex items-center mb-4 sm:mb-6">
-                        <span className="text-white px-2 sm:px-3 py-1 rounded-md mr-2">
+                        <span className="text-white px-2 sm:px-3 py-1 rounded-md ">
                             <Fan size={28} className="inline text-cyan-400" /> Real-time Control Systems
                         </span>
                     </h1>
