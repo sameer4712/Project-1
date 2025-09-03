@@ -147,7 +147,6 @@ function Home() {
                     </p>
 
                     <p className="pb-4">END_VAR</p>
-
                     <p className="leading-7">
                         IF PartDetectorA AND NOT PartDetectorB THEN <br />
                         <span className="pl-5">AllowMerge := TRUE;</span><br />
