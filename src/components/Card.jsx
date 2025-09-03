@@ -6,7 +6,6 @@ function Card({ name, para,image }) {
             <div>{image}</div>
             <h1 className='text-2xl font-bold text-cyan-50'>{name}</h1>
             <p className='text-[1.2rem] text-gray-400' >{para}</p>
-
         </div>
     )
 }

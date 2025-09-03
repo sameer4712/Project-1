@@ -4,7 +4,6 @@ function Card2({ input }) {
     return (
         <div className='text-gray-400 lg:font-mono font-semi-bold border border-gray-600 px-6 sm:px-10 py-6 rounded-xl '>
             <h3 className="mb-2 lg:text-[1.3rem]">Topic: factory/line1/sensor/temperature</h3>
-
             <p>&#123;</p>
             <div className='flex flex-col sm:flex-row sm:justify-between'>
                 <p className='pl-5 leading-relaxed'>
