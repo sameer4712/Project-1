@@ -310,7 +310,6 @@ function Home() {
                 <Button name="Start Your Application" />
             </motion.div>
 
-
         </div>
     );
 }
