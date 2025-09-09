@@ -245,7 +245,6 @@ function Home() {
                             <Infinity size={32} className="inline text-[#c47dff]" /> Our Core Values
                         </span>
                     </h1>
-
                     <div className="text-white bg-slate-900 px-6 sm:px-8 py-6 rounded-xl border border-gray-700 space-y-5">
                         <div className="flex items-start gap-3">
                             <span className="w-3 h-3 rounded-full bg-green-500 mt-2"></span>
