@@ -22,6 +22,7 @@ function Home() {
         <div className="overflow-x-hidden bg-black">
             <div className="relative w-full h-screen">
                 <img
+                
                     className="absolute inset-0 w-full h-full object-cover"
                     src={Page}
                     alt="Background"
