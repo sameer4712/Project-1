@@ -1,5 +1,4 @@
 import React from 'react'
-
 function Card2({ input }) {
     return (
         <div className='text-gray-400 lg:font-mono font-semi-bold border border-gray-600 px-6 sm:px-10 py-6 rounded-xl '>
