@@ -9,5 +9,4 @@ function Card3({no,title,para}) {
     </div>
   )
 }
-
 export default Card3
