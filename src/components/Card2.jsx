@@ -21,5 +21,4 @@ function Card2({ input }) {
         </div>
     )
 }
-
 export default Card2
