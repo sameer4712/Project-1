@@ -8,4 +8,5 @@ function Button({name}) {
         </div>
     )
 }
+
 export default Button
