@@ -9,4 +9,5 @@ function Card({ name, para,image }) {
         </div>
     )
 }
+
 export default Card
