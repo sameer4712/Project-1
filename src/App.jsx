@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 function App() {
   return (
     <div>
+      
       <Home />
     </div>
   )
