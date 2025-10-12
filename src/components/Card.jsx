@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Card({ name, para,image }) {
+    
     return (
         <div className='flex flex-col bg-slate-900 w-[24rem] p-8 mt-16  border border-gray-700 hover:border-gray-500 rounded-xl transition-all duration-500 ease-in-out hover:-translate-y-2'>
             <div>{image}</div>
