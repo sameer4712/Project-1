@@ -234,6 +234,7 @@ function Home() {
                     </div>
                 </motion.div>
 
+
                 <motion.div
                     className="flex flex-col w-full lg:w-[35rem] space-y-5 mt-6 lg:mt-0"
                     initial={{ opacity: 0, x: 30 }}
