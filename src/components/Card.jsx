@@ -11,4 +11,5 @@ function Card({ name, para,image }) {
     )
 }
 
+
 export default Card
