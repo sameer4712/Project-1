@@ -1,4 +1,3 @@
-import React from 'react'
 
 function Card3({no,title,para}) {
   return (
