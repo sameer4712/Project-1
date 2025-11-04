@@ -1,4 +1,3 @@
-import React from 'react'
 
 function Card2({ input }) {
     return (
