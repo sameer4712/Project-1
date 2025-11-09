@@ -1,4 +1,3 @@
-
 function Card({ name, para,image }) {
     
     return (
